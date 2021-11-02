@@ -1,0 +1,31 @@
+{
+	"version": "1.0.0",
+	"flag": "JCM",
+	"data": [
+		{
+			"key": 0,
+			"instruction": "00500913",
+			"command": "addi x18, x0, 5"
+		},
+		{
+			"key": 4,
+			"instruction": "01202423",
+			"command": "sw   x18, 8(x0)"
+		},
+		{
+			"key": 8,
+			"instruction": "00802983",
+			"command": "lw   x19, 8(x0)"
+		},
+		{
+			"key": 12,
+			"instruction": "01396a33",
+			"command": "or   x20, x18, x19"
+		},
+		{
+			"key": 16,
+			"instruction": "FF4988E3",
+			"command": "beq  x19, x20, -16"
+		}
+	]
+}

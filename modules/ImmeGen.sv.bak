@@ -1,0 +1,24 @@
+//立即数生成模块
+module ImmeGen(
+   input  logic [4:0] iImm_type,
+   input  logic [31:0] iInstruction,
+   output logic [31:0] oImmediate
+);
+   wire [31:0]  instr = iInstruction; // 换一个短点的符号
+   wire [31:0]  i_imm = { {20{instr[31]}}, instr[31:20] };  
+   //符号位扩展的方法，高位补足符号位（也说明了RISC-V的立即数是有符号数）
+   // wire [31:0]  s_imm = 
+   // wire [31:0]  b_imm = 
+   // wire [31:0]  u_imm = 
+   // wire [31:0]  j_imm = 
+
+   // 使用与或门的方法构成多路数据选择器
+   wire iJ_type, iU_type, iB_type, iS_type, iI_type;  //立即数类型信号
+   assign {iJ_type, iU_type, iB_type, iS_type, iI_type} = iImm_type;
+                                                      //传递立即数类型信号，确定立即数类型
+   assign  oImmediate = ({32{iI_type}} & i_imm)
+      // | ({32{iS_type}} & s_imm)
+      // | ({32{iB_type}} & b_imm)
+      ;
+
+endmodule

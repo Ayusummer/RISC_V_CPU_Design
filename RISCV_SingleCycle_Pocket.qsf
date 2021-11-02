@@ -1,0 +1,263 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2012 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Altera Program License
+# Subscription Agreement, Altera MegaCore Function License
+# Agreement, or other applicable license agreement, including,
+# without limitation, that your use is for the sole purpose of
+# programming logic devices manufactured by Altera and sold by
+# Altera or its authorized distributors.  Please refer to the
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 12.0 Build 178 05/31/2012 SJ Full Version
+# Date created = 09:44:02  May 14, 2014
+#
+# -------------------------------------------------------------------------- #
+
+
+
+
+
+
+
+
+
+#============================================================
+# Build by Terasic System Builder V1.0.0
+#============================================================
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY RISCV_Pocket_TOP
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:00:39  DECEMBER 21, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "12.0 SP2"
+
+#============================================================
+# CLOCK
+#============================================================
+
+
+#============================================================
+# Sma
+#============================================================
+
+#============================================================
+# LED
+#============================================================
+
+#============================================================
+# KEY
+#============================================================
+
+#============================================================
+# SW
+#============================================================
+
+#============================================================
+# SEG7
+#============================================================
+
+#============================================================
+# LCD
+#============================================================
+
+#============================================================
+# RS232
+#============================================================
+
+#============================================================
+# PS2
+#============================================================
+
+#============================================================
+# SDCARD
+#============================================================
+
+#============================================================
+# VGA
+#============================================================
+
+#============================================================
+# Audio
+#============================================================
+
+#============================================================
+# I2C for EEPROM
+#============================================================
+
+#============================================================
+# I2C for Audioand Tv-Decode 1 and 2
+#============================================================
+
+#============================================================
+# Ethernet 0
+#============================================================
+
+#============================================================
+# Ethernet 1
+#============================================================
+
+
+#============================================================
+# TV Decoder
+#============================================================
+
+#============================================================
+# USB
+#============================================================
+
+#============================================================
+# IR Receiver
+#============================================================
+
+#============================================================
+# SDRAM
+#============================================================
+
+#============================================================
+# SRAM
+#============================================================
+
+#============================================================
+# Flash
+#============================================================
+
+#============================================================
+# GPIO, GPIO connect to GPIO Default
+#============================================================
+
+#============================================================
+# HSMC, HSMC connect to HSMC Default
+#============================================================
+
+#============================================================
+# HSMC, HSMC connect to HSMC Default
+#============================================================
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+
+
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+
+set_location_assignment PIN_88 -to CLOCK_50
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name SMART_RECOMPILE ON
+
+
+set_global_assignment -name MISC_FILE "D:/Assignment/DE2_115_Default/DE2_115_Default.dpf"
+
+set_global_assignment -name MISC_FILE "E:/SVN/DE2_115/trunk/ref_design/DE2_115_Default/DE2_115_Default.dpf"
+
+set_global_assignment -name MISC_FILE "E:/DE2_115_NEW/trunk/ref_design/DE2_115_Default/DE2_115_Default.dpf"
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+
+set_global_assignment -name MISC_FILE "E:/my/SOPC/×ÊÁÏ/DE2-115/DE2_115_demonstrations/DE2_115_Default/DE2_115_Default.dpf"
+set_global_assignment -name MISC_FILE "E:/workspace/Jtag/OCD/OCD2012-05-25/DE2_115_Default/DE2_115_Default.dpf"
+set_global_assignment -name MISC_FILE "E:/workspace/Jtag/OCD/OCD2012-05-25/OCDonDE2_115/DE2_115_Default.dpf"
+set_global_assignment -name MISC_FILE "E:/workspace/Jtag/OCD/OCD2012-12-10/OCDonDE2_115/DE2_115_Default.dpf"
+set_location_assignment PIN_125 -to JTCK
+set_global_assignment -name MISC_FILE "E:/workspace/Jtag/OCD/OCD2013-01-05/OCDonDE2_115/DE2_115_Default.dpf"
+set_global_assignment -name MISC_FILE "E:/workspace/Jtag/OCD/OCD2013-01-15/OCDonDE2_115/DE2_115_Default.dpf"
+set_global_assignment -name MISC_FILE "D:/Projects/ComputerOrganization/OCDonDE2_115_JUC2/DE2_115_Default.dpf"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY .\\output
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_DATA0_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DCLK_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name GENERATE_RBF_FILE ON
+set_location_assignment PIN_110 -to RESET_N
+set_location_assignment PIN_34 -to KEY[0]
+set_location_assignment PIN_33 -to KEY[1]
+set_location_assignment PIN_32 -to KEY[2]
+set_location_assignment PIN_31 -to KEY[3]
+set_location_assignment PIN_30 -to SW[0]
+set_location_assignment PIN_28 -to SW[1]
+set_location_assignment PIN_11 -to SW[2]
+set_location_assignment PIN_10 -to SW[3]
+set_location_assignment PIN_7 -to SW[4]
+set_location_assignment PIN_3 -to SW[5]
+set_location_assignment PIN_2 -to SW[6]
+set_location_assignment PIN_1 -to SW[7]
+set_location_assignment PIN_98 -to SEG[0]
+set_location_assignment PIN_99 -to SEG[1]
+set_location_assignment PIN_100 -to SEG[2]
+set_location_assignment PIN_101 -to SEG[3]
+set_location_assignment PIN_103 -to SEG[4]
+set_location_assignment PIN_104 -to SEG[5]
+set_location_assignment PIN_105 -to SEG[6]
+set_location_assignment PIN_106 -to SEG[7]
+set_location_assignment PIN_73 -to SEL[0]
+set_location_assignment PIN_74 -to SEL[1]
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_location_assignment PIN_127 -to JTMS
+set_location_assignment PIN_120 -to JTDI
+set_location_assignment PIN_119 -to JTDO
+set_location_assignment PIN_38 -to LEDR[0]
+set_location_assignment PIN_39 -to LEDR[1]
+set_location_assignment PIN_42 -to LEDR[2]
+set_location_assignment PIN_43 -to LEDR[3]
+set_location_assignment PIN_44 -to LEDR[4]
+set_location_assignment PIN_46 -to LEDR[5]
+set_location_assignment PIN_49 -to LEDR[6]
+set_location_assignment PIN_50 -to LEDR[7]
+set_location_assignment PIN_51 -to LEDR[8]
+set_location_assignment PIN_52 -to LEDR[9]
+set_location_assignment PIN_53 -to LEDR[10]
+set_location_assignment PIN_54 -to LEDR[11]
+set_location_assignment PIN_55 -to LEDR[12]
+set_location_assignment PIN_58 -to LEDR[13]
+set_location_assignment PIN_59 -to LEDR[14]
+set_location_assignment PIN_60 -to LEDR[15]
+set_location_assignment PIN_65 -to LEDG[0]
+set_location_assignment PIN_66 -to LEDG[1]
+set_location_assignment PIN_67 -to LEDG[2]
+set_location_assignment PIN_68 -to LEDG[3]
+set_location_assignment PIN_69 -to LEDG[4]
+set_location_assignment PIN_70 -to LEDG[5]
+set_location_assignment PIN_71 -to LEDG[6]
+set_location_assignment PIN_72 -to LEDG[7]
+set_location_assignment PIN_75 -to SEL[2]
+set_location_assignment PIN_76 -to SEL[3]
+set_location_assignment PIN_84 -to SEL[4]
+set_location_assignment PIN_85 -to SEL[5]
+set_location_assignment PIN_86 -to SEL[6]
+set_location_assignment PIN_87 -to SEL[7]
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to JTMS
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to JTDI
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to JTDO
+set_global_assignment -name VERILOG_FILE RISCV_Pocket_TOP.v
+set_global_assignment -name VERILOG_FILE WatchChain.v
+set_global_assignment -name VERILOG_FILE qip/pll.v
+set_global_assignment -name QXP_FILE qip/JuTAG_RISCV.qxp
+set_global_assignment -name VERILOG_FILE qip/GlobalCLK.v
+set_global_assignment -name SYSTEMVERILOG_FILE modules/ALUDecode.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modules/ALUAdder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modules/ALUSelect.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modules/ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modules/TwoDataSelect.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modules/RegisterFile_5_32bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modules/DataReg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modules/MainDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modules/ImmeGen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modules/RAMwReadClk.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CPU/CPU_RISCV_SC5.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

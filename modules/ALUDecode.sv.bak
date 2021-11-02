@@ -1,0 +1,25 @@
+//ALU译码器
+//雏形
+module ALUDecode
+(
+    input  logic [2:0] iData,
+    output logic [2:0] oSeg
+);
+
+always_comb
+  begin
+     case(iData)
+     3'h0 : oSeg=3'b000;
+     3'h1 : oSeg=3'b001;
+     3'h2 : oSeg=3'b010;
+     3'h3 : oSeg=3'b011;
+     3'h4 : oSeg=3'b100;
+     3'h5 : oSeg=3'b101;
+     3'h6 : oSeg=3'b110;
+     3'h7 : oSeg=3'b111;
+     default : oSeg=3'bx;
+     
+     endcase
+  end
+    
+endmodule

@@ -1,0 +1,25 @@
+//主译码器，译opcode，判断指令类别
+module MainDecoder(
+   input  logic [6:0] iOpcode,    //输入数据opcode，判断指令类别
+   output logic [4:0] oImm_type,  //J, U, B, S, I type 立即数类型
+   output logic oRegWrite,        //寄存器堆写使能
+   output logic [1:0] ALUop       //ALU功能选择信号
+);
+  localparam K = 8;               // 输出的控制信号个数（位数）
+  logic [K-1:0] controls;         //声明输出（译出）的控制信号
+  assign {ALUop,oImm_type[4:0], oRegWrite} = controls;
+                                  //将译出的控制信号分发给相应组件
+  always_comb
+    case(iOpcode)
+      7'b0010011: controls <= 8'b11_00001_1; // I-TYPE
+      /*- 在下面补充指令译码
+        R-Type
+        Stroe
+        Load
+        Branch 
+        ...... -*/
+      default:    controls <= {K{1'b0}}; // illegal opcode
+    endcase
+
+endmodule
+

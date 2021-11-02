@@ -1,0 +1,31 @@
+//ALU加法器模块
+//雏形
+//我觉得这里面参数化的价值不大所以只对端口参数化处理了
+module ALUAdder
+#(parameter N = 32)
+(
+    input  logic M0,            //控制数据&辅助加法数据
+    input  logic [N-1:0] X,Y,   //源数据X,Y
+    output logic [N-1:0] result,//结果
+    output logic [2:0] flag     //标志位（符号位，零标志，溢出位）
+);
+
+logic sign, zero, overflow;     //符号位，零标志，溢出位
+logic [N-1:0] B;                //加数B
+logic C0;                       //加法器控制端
+logic [N:0 ]result_origin;      //加法原始结果
+wire z=1'b0;                    //工具数0
+
+    
+assign B = Y ^ {(N-1){M0}};     
+assign C0 = M0;
+
+//加法器计算模块
+assign result_origin = A + B + C0;     //加法原始结果
+assign result = result_origin[N-1:0];  //加法器结果为原始结果出掉溢出位
+assign sign = result[N-1];             //加法结果最高位就是符号位
+assign zero = (result==0) ? 1 : 0;     //零标志  ~|F;  |F表示各位相或（规约或运算）
+assign overflow = (~A[N-1]) & ~B[N-1] & result[N-1] | (A[N-1]) & B[N-1] & ~result[N-1] ;
+                                       //两正数相加结果为负或者两负数相加结果为正都表示有溢出
+
+endmodule
